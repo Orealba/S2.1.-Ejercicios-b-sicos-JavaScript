@@ -19,24 +19,55 @@
     <div class="container mt-5">
       <div class="titles">
         <h1>S2.1. Exercicis bàsics JavaScript</h1>
-        <h2 class="mb-2rem">Nivel 1</h2>
+        <h2>Ejercicio 1.1: Arrow functions</h2>
+        <h3 class="">Nivel 1</h3>
       </div>
       <div>
-        <h3>Exercici 1</h3>
+        <h4>Exercici 1</h4>
         <p>
           Conversión de funciones: Tienes una función add que acepta dos
           parámetros y devuelve su suma. Conviértela en una función de flecha.
           <br />Por ejemplo:function add(a, b) {return a + b;}.
         </p>
-        <div class="d-block">
-            <input type="num" id="firstNumber" >Ingrese un número </>
-            <input type="num" id="secondNumber">Ingrese otro número </>
-            <button onclick="add()">Sumar</button>
-            <p>Respuesta<span id="addAnswer"></span>  </p>
+        <div class="d-flex">
+          <label for="addition">
+            <b>Ingrese un número </b>
+          </label>
+          <input
+            type="num"
+            id="firstNumber"
+            class="mr-2" />
+          <label for="addition"> <b>Ingrese otro número </b> </label>
+          <input
+            type="num"
+            id="secondNumber" />
+
+          <button onclick="addOnclick()">Sumar</button>
+          <p>Respuesta: <span id="addAnswer"></span></p>
         </div>
-        
+      </div>
+      <div>
+        <h4>Exercici 2</h4>
+        <p>
+          Función de flecha sin parámetros: Crea una función de flecha llamada
+          randomNumber que no necesite parámetros y que devuelva un número
+          aleatorio entre 0 y 100.
+        </p>
+        <button onclick="creatRandomNumber()">Número random</button>
+        <span id="resultRandomNumber"></span>
+      </div>
+      <div>
+        <h4>Exercici 3</h4>
+        <p>
+          Uso de 'this' en las funciones de flecha: Crea una clase person que
+          tenga una propiedad name y una función greet que utilice una función
+          de flecha. La función debe imprimir un saludo que incluya el nombre de
+          la persona. Por ejemplo: console.log(Hola, ${this.name});.
+        </p>
+        <button onclick="creatRandomNumber()">Número random</button>
+        <span id="resultRandomNumber"></span>
       </div>
     </div>
-    <script src="funtions.js"></script>
+    <script src="functions.js"></script>
   </body>
 </html>
