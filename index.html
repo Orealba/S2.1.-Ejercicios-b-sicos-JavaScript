@@ -16,15 +16,15 @@
     <title>S2.1. Exercicis bàsics JavaScript</title>
   </head>
   <body>
-    <div class="container mt-5">
-      <div class="titles">
+    <div class="container">
+      <div class="mt-5">
         <h1>S2.1. Exercicis bàsics JavaScript</h1>
-        <h2>Ejercicio 1.1: Arrow functions</h2>
-        <h3 class="">Nivel 1</h3>
+        <h2 class="mt-2">Ejercicio 1.1: Arrow functions</h2>
+        <h3 class="mt-5">Nivel 1</h3>
       </div>
-      <div>
-        <h4>Exercici 1</h4>
-        <p>
+      <div class="mb-5">
+        <h4>Exercicio 1</h4>
+        <p class="mt-2">
           Conversión de funciones: Tienes una función add que acepta dos
           parámetros y devuelve su suma. Conviértela en una función de flecha.
           <br />Por ejemplo:function add(a, b) {return a + b;}.
@@ -47,6 +47,7 @@
         </div>
       </div>
       <div>
+        <hr>
         <h4>Exercici 2</h4>
         <p>
           Función de flecha sin parámetros: Crea una función de flecha llamada
@@ -56,7 +57,9 @@
         <button onclick="creatRandomNumber()">Número random</button>
         <span id="resultRandomNumber"></span>
       </div>
+      <hr>
       <div>
+        
         <h4>Exercici 3</h4>
         <p>
           Uso de 'this' en las funciones de flecha: Crea una clase person que
@@ -64,9 +67,10 @@
           de flecha. La función debe imprimir un saludo que incluya el nombre de
           la persona. Por ejemplo: console.log(Hola, ${this.name});.
         </p>
-        <button onclick="creatRandomNumber()">Número random</button>
-        <span id="resultRandomNumber"></span>
+        <button onclick="sayHi()">Saludar</button>
+        <span id="hi"></span>
       </div>
+      <hr>
     </div>
     <script src="functions.js"></script>
   </body>
