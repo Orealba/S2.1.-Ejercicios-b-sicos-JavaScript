@@ -68,7 +68,7 @@
         <button onclick="sayHi()">Saludar</button>
         <span id="hi"></span>
       </div>
-
+      <!--ME FALTA  -->
       <div>
         <h3 class="mt-5 border">Nivel 2</h3>
         <h4>Exercicio 4</h4>
@@ -116,12 +116,51 @@
           (num1 y num2) es mayor. Si num1 es mayor, devuelve 'num1 es mayor'. Si
           no, devuelve 'num2 es mayor'.
         </p>
-        <label for="age"> <b>Ingrese una edad </b> </label>
+        <label for="major">
+          <b>Ingrese un número </b>
+        </label>
         <input
           type="num"
-          id="userAge" />
-        <button onclick="puedeConducir()">¿Puede conducir?</button>
-        <span id="showMe"></span>
+          id="userFirstNumber" />
+        <label for="major"> <b>Ingrese otro número </b> </label>
+        <input
+          type="num"
+          id="userSecondNumber" />
+
+        <button onclick="major()">Ver el mayor:</button>
+        <span id="showMajor"></span>
+      </div>
+      <h3 class="mt-5 border">Nivel 2</h3>
+
+      <!--ME FALTA-->
+      <div class="mb-2">
+        <h4>Exercicio 3</h4>
+        <p>
+          Uso enlazado de operadores ternarios: Escribe una expresión que
+          utilice enlaces de operadores ternarios para determinar si un número
+          es positivo, negativo o cero. Operador ternario con funciones: Crea
+          una función encontrarMaximo que acepte tres parámetros (a, b, c) y
+          utilice el operador ternario para determinar el valor máximo.
+        </p>
+        <label for="typeNumber"> <b>Ingrese un número positivo, negativo o cero:</b> </label>
+        <input
+          type="num"
+          id="userTypeNumber" />
+        <button onclick="puedeConducir()">Mostrar tipo</button>
+        <span id="showMeTheType"></span>
+      </div>
+      <h3 class="mt-5 border">Nivel 3</h3>
+      <div class="mb-2">
+        <h4>Exercicio 4</h4>
+        <p>
+          Operador ternario dentro de un bucle: Escribe una función parOImpar
+          que acepte un array de números y utilice un bucle para recorrer el
+          array. Dentro del bucle, utiliza el operador ternario para determinar
+          si cada número es par o impar.
+        </p>
+        
+        <button onclick="parOImpar()">Mostrar</button>
+        <span id="showMeTypeNumber"></span>
       </div>
     </div>
     <script src="functions.js"></script>

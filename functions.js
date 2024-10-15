@@ -85,15 +85,40 @@ function time() {
   setTimeout(showNote, 3000);
 }
 
-
 //Ejercicio 1.2:
 //nivel 1
-//ejercicio 5
-
+//ejercicio 1
 
 function puedeConducir() {
-  let userAge = parseFloat(document.getElementById("userAge").value);
-  let answer = userAge >= 18 ? "Puedes conducir" : "No puedes conducir";
-  console.log(answer)
-  document.getElementById("showMe").innerHTML = answer
+  let userAge = parseFloat(document.getElementById('userAge').value);
+  let answer = userAge >= 18 ? 'Puedes conducir' : 'No puedes conducir';
+  console.log(answer);
+  document.getElementById('showMe').innerHTML = answer;
+}
+//ejercicio 2
+
+function major() {
+  let numberOne = parseFloat(document.getElementById('userFirstNumber').value);
+
+  let numberTwo = parseFloat(document.getElementById('userSecondNumber').value);
+
+  let majorNumber =
+    numberOne > numberTwo
+      ? `El mayor es el número ${numberOne}`
+      : `El mayor es el número ${numberTwo} `;
+
+  console.log(majorNumber);
+  document.getElementById('showMajor').innerHTML = majorNumber;
+}
+//nivel3
+//ejercicio4
+
+function parOImpar() {
+  let numbers = [1, 3, 5, 4, 2, 7, 8, 9, 12, 54, 23, 33, 76, 78];
+  for (let i = 0; i < numbers.length; i++) {
+    let parOImpar = numbers % 2 === 0 ? `Es par` : `Es impar`;
+    console.log(`El número ${numbers} es ${parOImpar}`);
+    return parOImpar;
+  }
+  document.getElementById('showMeTypeNumber').innerHTML = `El número ${numbers} es ${parOImpar}`
 }
