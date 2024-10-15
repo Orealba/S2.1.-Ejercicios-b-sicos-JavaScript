@@ -114,11 +114,16 @@ function major() {
 //ejercicio4
 
 function parOImpar() {
-  let numbers = [1, 3, 5, 4, 2, 7, 8, 9, 12, 54, 23, 33, 76, 78];
+  let numbers = [1, 3, 5, 4, 2, 7];
+  let tiposDeNumeros = '';
   for (let i = 0; i < numbers.length; i++) {
-    let parOImpar = numbers % 2 === 0 ? `Es par` : `Es impar`;
-    console.log(`El número ${numbers} es ${parOImpar}`);
-    return parOImpar;
+    let parOImpar = numbers[i] % 2 === 0 ? `Es par` : `Es impar`;
+    console.log(`El número ${numbers[i]} es ${parOImpar}`);
+    tiposDeNumeros += `El número ${numbers[i]} es ${parOImpar}`;
   }
-  document.getElementById('showMeTypeNumber').innerHTML = `El número ${numbers} es ${parOImpar}`
+  document.getElementById('showMeTypeNumber').innerHTML = tiposDeNumeros;
 }
+
+//Ejercicio 1.3: callback
+//nivel 1
+//ejercicio 1
