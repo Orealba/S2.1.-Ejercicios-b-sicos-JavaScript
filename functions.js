@@ -127,3 +127,66 @@ function parOImpar() {
 //Ejercicio 1.3: callback
 //nivel 1
 //ejercicio 1
+//FALTAN TODOS-----------------------------------------------------------
+
+function procesar(num, callback) {
+  console.log(`este es mi número: ${num}`);
+  callback(num);
+}
+function myNumber() {
+  let myNumber = 5;
+  let callFunction = procesar(myNumber);
+  document.getElementById('myCallbackNumber').innerHTML = callFunction;
+}
+
+//Ejercicio 1.4: Rest & Spread operators:
+//ejercicio 1
+
+function ShowArray() {
+  let array1 = [1, 2, 3, 4, 5];
+  let array2 = [6, 7, 8, 9, 10];
+  let allArrays = [...array1, ...array2];
+  console.log(allArrays);
+  document.getElementById('myArray').innerHTML = allArrays;
+}
+
+//ejercicio 2
+//POR QUÉ SE EJECUTA SIN DARLE AL BOTON??
+function suma(...numbers) {
+  let results = 0;
+
+  numbers.forEach(function (number) {
+    results = results + number;
+  });
+  document.getElementById('myNumbersAdding').innerHTML = results;
+  return results;
+}
+function addFunction() {
+  console.log(suma(2, 4, 6, 8, 10));
+}
+
+//nivel 2
+//ejercicio3
+
+function objects() {
+  const objeto1 = {
+    cafe: 5,
+    leche: 10,
+  };
+  const objeto2 = { ...objeto1 };
+  objeto2.leche = 20;
+  console.log('estos son los ingredientes que hay: ', objeto1, objeto2);
+  document.getElementById('myObjects').innerHTML =
+    'estos son los ingredientes que hay: Caja1:' +
+    'café:' +
+    objeto1.cafe +
+    ' grs ' +
+    'leche: ' +
+    objeto1.leche +
+    ' mls.' +
+    ' Objeto 2 : café: ' +
+    +objeto2.cafe +
+    'grs, ' +
+    objeto2.leche +
+    'mls. ';
+}
