@@ -190,3 +190,14 @@ function objects() {
     objeto2.leche +
     'mls. ';
 }
+
+//ejercicio 4
+//FALTA------------------------------------------------------------------
+
+
+//Nivel 3
+//ejercicio 5
+
+function newFunction(apples,pears,bannanas){
+  return apples + pears + bannanas
+}
