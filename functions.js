@@ -194,10 +194,70 @@ function objects() {
 //ejercicio 4
 //FALTA------------------------------------------------------------------
 
-
 //Nivel 3
 //ejercicio 5
 
-function newFunction(apples,pears,bannanas){
-  return apples + pears + bannanas
+function fruits(apples, pears, bannanas) {
+  return apples + pears + bannanas;
+}
+
+function newFunction() {
+  let numberOfFruits = [5, 3, 7];
+  let myFruits = fruits(...numberOfFruits);
+  console.log(myFruits + ' frutas');
+  document.getElementById('myNewFunctionFruits').innerHTML =
+    'Tengo ' + myFruits + ' frutas';
+}
+
+//ejercicio 6
+
+function myRecipe() {
+  const pizzaDough = {
+    flour: 500,
+    water: 300,
+    salt: 1,
+  };
+  const myPizzaIngredients = {
+    ...pizzaDough,
+    tomatosauce: 200,
+    pepperoni: 300,
+    cheese: 500,
+  };
+
+  let totalIngredients = myPizzaIngredients;
+  console.log('Estos son los ingredientes para mi pizza : ', totalIngredients);
+  document.getElementById('myRecipeIngredients').innerHTML =
+    'Estos son los ingredientes para mi pizza : <br>' +
+    'Flour: ' +
+    myPizzaIngredients.flour +
+    'grs.<br>' +
+    'Water: ' +
+    myPizzaIngredients.water +
+    'mls.<br>' +
+    'Salt: ' +
+    myPizzaIngredients.salt +
+    'grs.<br>' +
+    'Tomato Sauce: ' +
+    myPizzaIngredients.tomatosauce +
+    ' mls. <br>' +
+    'Pepperoni: ' +
+    myPizzaIngredients.pepperoni +
+    'grs. <br>' +
+    'Cheese: ' +
+    myPizzaIngredients.cheese +
+    'grs.';
+}
+
+//Ejercicio 1.5: Array transformations
+//nivel 1
+//ejercicio 1
+
+function myFunctionMap() {
+  let numbers = [3, 4, 6];
+  let squerOf = numbers.map((num) => num * num);
+  console.log(
+    'El cuadrado de los números 3,4,6; es el siguiente:   ' + squerOf,
+  );
+  document.getElementById('myFunctionMap').innerHTML =
+    'El cuadrado de los números 3,4,6; es el siguiente:  ' + squerOf;
 }
