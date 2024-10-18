@@ -361,3 +361,38 @@ function myFilter() {
   console.log('Pares: ' + pares);
   document.getElementById('myFilter').innerHTML = pares;
 }
+//Nivel 2
+//Ejercicio 4
+function myForInFunction() {
+  let obj = {
+    nombre: 'Ola',
+    edad: 25,
+    ciudad: 'Barcelona',
+  };
+  for (let inf in obj) {
+    console.log(inf + ': ' + obj[inf]);
+  }
+}
+
+//Ejercicio 5
+function breakFunction() {
+  let numeros = [1, 2, 3, 4, 5, 6];
+  for (let num of numeros) {
+    if (num == 5) {
+      break;
+    }
+    console.log(num);
+  }
+}
+
+//Nivel 3
+//ejercicio 6
+
+function myIndexFunction() {
+  let noms = ['Anna', 'Bernat', 'Clara'];
+  let myIndex = 0;
+  for (let names of noms) {
+    console.log('Posición: ' + myIndex + ' Nombre: ' + names);
+    myIndex++;
+  }
+}
