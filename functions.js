@@ -261,3 +261,52 @@ function myFunctionMap() {
   document.getElementById('myFunctionMap').innerHTML =
     'El cuadrado de los números 3,4,6; es el siguiente:  ' + squerOf;
 }
+
+//ejercicio 2
+
+function mynewArray() {
+  let myFirstArray = [1, 2, 3, 4];
+  let mySecondArray = myFirstArray.filter((array) => array % 2 == 0);
+  console.log(mySecondArray);
+  document.getElementById('mynewArray').innerHTML =
+    'Mi array de pares: ' + mySecondArray;
+}
+
+//ejercicio 3
+
+function arrayFunction() {
+  let myArray = [1, 10, 8, 11];
+  let myBiggerNumber = myArray.find((num) => num > 10);
+  console.log('El número mayor a 10 es : ' + myBiggerNumber);
+  document.getElementById('arrayFunction').innerHTML =
+    'El número mayor a 10 es : ' + myBiggerNumber;
+}
+//ejercicio 4
+
+function myTotalAdd() {
+  let myArrayNumbers = [13, 7, 8, 21];
+  let adding = myArrayNumbers.reduce(
+    (number, totalAdd) => number + totalAdd,
+    0,
+  );
+  console.log('El valor de la suma del array es: ' + adding);
+  document.getElementById('myTotalAdd').innerHTML =
+    'El valor de la suma del array es: ' + adding;
+}
+//Nivel 2
+//ejercicio 5
+
+const myMiniFunction = (myArray) =>
+  myArray
+    .filter((num) => num >= 10)
+    .map((num) => num * 2)
+    .reduce((num, totalNumber) => num + totalNumber, 0);
+
+function myUltraFunction() {
+  let myArrayOfNumber = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+  console.log(myMiniFunction(myArrayOfNumber));
+  document.getElementById('myUltraFunction').innerHTML = "Resultado : " + myMiniFunction(myArrayOfNumber)
+
+}
+
+//
