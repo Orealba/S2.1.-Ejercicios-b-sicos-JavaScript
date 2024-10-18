@@ -305,8 +305,59 @@ const myMiniFunction = (myArray) =>
 function myUltraFunction() {
   let myArrayOfNumber = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
   console.log(myMiniFunction(myArrayOfNumber));
-  document.getElementById('myUltraFunction').innerHTML = "Resultado : " + myMiniFunction(myArrayOfNumber)
-
+  document.getElementById('myUltraFunction').innerHTML =
+    'Resultado : ' + myMiniFunction(myArrayOfNumber);
 }
 
-//
+//nivel3
+//ejercicio 6
+
+function someArrays() {
+  let myArrayFunction = [11, 12, 13, 14];
+  let someFunction = myArrayFunction.some((num) => num > 10);
+  let everyFunction = myArrayFunction.every((num) => num > 10);
+  console.log(
+    'del array : ' +
+      myArrayFunction +
+      ' con every es: ' +
+      everyFunction +
+      ' y con some es : ' +
+      someFunction,
+  );
+  document.getElementById('someArrays').innerHTML =
+    'del array : ' +
+    myArrayFunction +
+    ' con every es: ' +
+    everyFunction +
+    ' y con some es : ' +
+    someFunction;
+}
+
+//Ejercicio 1.6: Array loops
+//Nivel 1
+//Ejercicio 1
+
+function myLoopFunction() {
+  let myNames = '';
+  let nombres = ['Anna', 'Bernat', 'Clara'];
+  nombres.forEach((name) => {
+    myNames += ' ' + name;
+    console.log('Nombres: ' + name);
+  });
+  document.getElementById('myLoopFunction').innerHTML = 'Nombres: ' + myNames;
+}
+
+//Ejercicio 2
+
+function myLoopArray() {
+  let nombres = ['Anna', 'Bernat', 'Clara'];
+  for (let names of nombres) console.log('Nombres : ' + names);
+}
+
+//Ejercicio 3
+function myFilter() {
+  let numeros = [1, 2, 3, 4, 5, 6];
+  let pares = numeros.filter((num) => num % 2 == 0);
+  console.log('Pares: ' + pares);
+  document.getElementById('myFilter').innerHTML = pares;
+}
