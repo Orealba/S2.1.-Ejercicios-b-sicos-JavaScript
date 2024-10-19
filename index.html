@@ -506,7 +506,95 @@
       </div>
       <hr />
       <h2 class="mt-5">Ejercicio 1.7: Promisas & Async/Await</h2>
+      <h3 class="mt-5 border">Nivel 1</h3>
+      <div class="mt-5">
+        <h4>Ejercicio 1</h4>
+        <p>
+          Creación de una Promesa: Crea una promesa que se resuelva después de 2
+          segundos y que devuelva la cadena de texto 'Hola, mundo'.
+        </p>
 
+        <button
+          onclick="myPromise()"
+          class="mb-2">
+          Mostrar
+        </button>
+        <span id="myPromise"></span>
+      </div>
+      <div class="mt-5">
+        <h4>Ejercicio 2</h4>
+        <p>
+          Utilización de una Promesa: Utiliza la promesa creada en el ejercicio
+          anterior. Crea un .then que imprima el resultado en la consola.
+        </p>
+
+        <button
+          onclick="myPromise()"
+          class="mb-2">
+          Mostrar en consola
+        </button>
+      </div>
+      <!--FALTAAAAAA-------------------------------------------------------------------------->
+      <div class="mt-5">
+        <h4>Ejercicio 3</h4>
+        <p>
+          Promesa con reject: Crea una promesa que se resuelva después de 2
+          segundos si el input es igual a 'Hola', y que la rechace si el input
+          es cualquier otra cosa.
+        </p>
+        <h5>Introduzca "hola"</h5>
+        <input
+          type="text"
+          id="promise" />
+        <button
+          onclick="myPromiseReact()"
+          class="mb-2">
+          Mostrar en consola
+        </button>
+        <span id="myPromiseReact"></span>
+      </div>
+      <div class="mt-5">
+        <h4>Ejercicio 4</h4>
+        <p>
+          Uso de async/await: Escribe una función asíncrona que utilice la
+          función await para esperar el resultado de la promesa creada en el
+          ejercicio 1, y que después imprima este resultado en la consola.
+        </p>
+
+        <button
+          onclick="myPromise2()"
+          class="mb-2">
+          Mostrar en consola
+        </button>
+        <span id="myPromise2"></span>
+      </div>
+
+      <h3 class="mt-5 border">Nivel 1</h3>
+      <div class="mt-5">
+        <h4>Ejercicio 5</h4>
+        <p>
+          Gestión de errores con async/await: Modifica la función del ejercicio
+          4 para que capture cualquier posible error utilizando un blog
+          try/catch.
+        </p>
+
+        <span id="asyncAwait"></span>
+      </div>
+      <h3 class="mt-5 border">Nivel 3</h3>
+      <div class="mt-5">
+        <h4>Ejercicio 6</h4>
+        <p>
+          Promise.all: Crea dos promesas que se resuelvan después de 2 y 3
+          segundos, respectivamente. Use Promise.all para esperar que ambas
+          promesas se resuelvan, e imprime los resultados en la consola.
+        </p>
+        <button
+          onclick="promiseAll()"
+          class="mb-2">
+          Mostrar 
+        </button>
+        <span id="promiseAll"></span>
+      </div>
       <!--final---------------------------------------------------------->
     </div>
     <script src="functions.js"></script>

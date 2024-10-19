@@ -396,3 +396,103 @@ function myIndexFunction() {
     myIndex++;
   }
 }
+
+//Ejercicio 1.7:Promisas & Async/Await
+//Nivel 1
+//Ejercicio 1 y 2
+
+function myPromise() {
+  const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Hola, mundo');
+    }, 2000);
+  });
+  myPromise.then((message) => {
+    console.log(message);
+    document.getElementById('myPromise').innerHTML = message;
+  });
+}
+//Falta--------------------------------------------------------------------------------------
+//Ejercicio 3
+
+function myPromiseReact() {
+  let userAnswer = document.getElementById('myPromiseReact').value;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (userAnswer == 'hola') {
+        resolve(
+          (document.getElementById('myPromiseReact').innerHTML =
+            'entrada correcta'),
+        );
+      } else {
+        reject(
+          (document.getElementById('myPromiseReact').innerHTML =
+            'entrada incorrecta'),
+        );
+      }
+    }, 2000);
+  });
+  // .then((message) => console.log(message))
+  // .catch((error) => console.error(error));
+}
+
+//Ejercicio 4
+//REVISAR----------------------------------------------------------------
+async function myPromise2() {
+  const myPromise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('hola,mundo');
+    }, 2000);
+  });
+  const message = await myPromise2;
+  console.log('message');
+
+  document.getElementById('myPromise2').innerHTML = message;
+}
+myPromise2();
+
+//nivel 2
+//ejercicio 5
+async function asyncAwait() {
+  try {
+    const myPromise2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('Hola, mundo');
+      }, 2000);
+    });
+
+    const message = await myPromise2;
+
+    console.log(message);
+    document.getElementById('asyncAwait').innerHTML = message;
+  } catch (error) {
+    console.error('Error:', error);
+    document.getElementById('asyncAwait').innerHTML = `Error: ${error}`;
+  }
+}
+asyncAwait();
+
+//FALTA----------------------------------------------------------------------------------------------
+//nivel 3
+//ejercicio 6
+
+function promiseAll() {
+  const promesa1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Promesa 1 resuelta en 2 segundos');
+    }, 2000);
+  });
+
+  const promesa2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Promesa 2 resuelta en 3 segundos');
+    }, 3000);
+  });
+  Promise.all([promesa1, promesa2])
+    .then((resultados) => {
+      console.log(resultados);
+    })
+    .catch((error) => {
+      console.error('Ocurrió un error:', error);
+    });
+}
