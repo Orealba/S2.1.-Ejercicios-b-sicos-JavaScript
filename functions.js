@@ -49,23 +49,19 @@ function sayHi() {
 
 //Nivel 2
 //Ejercicio 4
-//Función de flecha dentro de un loop: Crea una función llamada
-//printNumbers que acepte un array de números y utilice un loop
-// for para imprimir cada número en la consola utilizando una función de flecha.
 
 let printNumbers = () => {
   let arrayNumber = [1, 2, 3, 4];
-  let showNumbers = printNumbers(arrayNumber);
-  console.log(showNumbers);
+  showNumbers(arrayNumber);
 };
 
 function showNumbers(numbers) {
+  let myNumbers = '';
   for (let i = 0; i < numbers.length; i++) {
-    () => console.log(numbers[i]);
-
-    document.getElementById('showNumbers').innerHTML = showNumbers;
+    (() => console.log(numbers[i]))();
+    myNumbers += numbers[i] + ' ';
   }
-  return;
+  document.getElementById('showNumbers').innerHTML = myNumbers;
 }
 //Nivel3
 //ejercicio5
@@ -110,6 +106,32 @@ function major() {
   console.log(majorNumber);
   document.getElementById('showMajor').innerHTML = majorNumber;
 }
+//nivel 2
+//ejercicio3
+//primera parte
+function ternario() {
+  let numero = Number(document.getElementById('userTypeNumber').value);
+  let resultado =
+    numero > 0
+      ? 'El número es positivo'
+      : numero < 0
+      ? 'El número es negativo'
+      : 'El número es cero';
+  document.getElementById('ternario').innerHTML = resultado;
+}
+//segunda parte
+function encontrarMaximo() {
+  let a = Number(document.getElementById('number1').value);
+  let b = Number(document.getElementById('number2').value);
+  let c = Number(document.getElementById('number3').value);
+
+  let maximo = a > b && a > c ? a : b > c ? b : c;
+  console.log('El número máximo es: ' + maximo);
+
+  document.getElementById('ternario2').innerHTML =
+    'El número máximo es: ' + maximo;
+}
+
 //nivel3
 //ejercicio4
 
@@ -117,7 +139,7 @@ function parOImpar() {
   let numbers = [1, 3, 5, 4, 2, 7];
   let tiposDeNumeros = '';
   for (let i = 0; i < numbers.length; i++) {
-    let parOImpar = numbers[i] % 2 === 0 ? `Es par` : `Es impar`;
+    let parOImpar = numbers[i] % 2 === 0 ? `  par, ` : ` impar, `;
     console.log(`El número ${numbers[i]} es ${parOImpar}`);
     tiposDeNumeros += `El número ${numbers[i]} es ${parOImpar}`;
   }
@@ -127,16 +149,81 @@ function parOImpar() {
 //Ejercicio 1.3: callback
 //nivel 1
 //ejercicio 1
-//FALTAN TODOS-----------------------------------------------------------
 
 function procesar(num, callback) {
-  console.log(`este es mi número: ${num}`);
+  console.log(`Este es mi número: ${num}`);
   callback(num);
 }
+
 function myNumber() {
   let myNumber = 5;
-  let callFunction = procesar(myNumber);
-  document.getElementById('myCallbackNumber').innerHTML = callFunction;
+
+  procesar(myNumber, function (numero) {
+    document.getElementById('myCallbackNumber').innerHTML =
+      'El número es: ' + numero;
+  });
+}
+//ejercicio 2
+
+function calculadora(num1, num2, callback) {
+  callback(num1, num2);
+}
+function calculate() {
+  let numero1 = 5;
+  let numero2 = 10;
+  calculadora(numero1, numero2, function (a, b) {
+    let suma = a + b;
+    console.log('La suma es: ' + suma);
+    document.getElementById('calculateNumbers').innerHTML =
+      'La suma es: ' + suma;
+  });
+}
+
+//ejercicio 3
+
+function esperarISaludar(nombre, callback) {
+  setTimeout(() => {
+    callback(nombre);
+  }, 2000);
+}
+
+function sayHello() {
+  let nombre = 'Juan';
+
+  esperarISaludar(nombre, function (name) {
+    console.log('Hola, ' + name);
+    document.getElementById('saludar').innerHTML = 'Hola, ' + name + '!';
+  });
+}
+//ejercicio 4
+
+function procesarElements(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i], i);
+  }
+}
+
+function myCallback2() {
+  let array = [1, 2, 3, 4, 5];
+
+  procesarElements(array, function (element, index) {
+    console.log(`Elemento: ${element}, Índice: ${index}`);
+    document.getElementById(
+      'myCallback2',
+    ).innerHTML += `Elemento: ${element}, Índice: ${index} <br>`;
+  });
+}
+//nivel3
+//ejercicio 5
+function procesarCadena(cadena, callback) {
+  let cadenaMayusculas = cadena.toUpperCase();
+  callback(cadenaMayusculas);
+}
+function myChain() {
+  let cadena = 'mi cadena de callback';
+  procesarCadena(cadena, function (cadenaTransformada) {
+    document.getElementById('myChain').innerHTML = cadenaTransformada;
+  });
 }
 
 //Ejercicio 1.4: Rest & Spread operators:
@@ -146,12 +233,12 @@ function ShowArray() {
   let array1 = [1, 2, 3, 4, 5];
   let array2 = [6, 7, 8, 9, 10];
   let allArrays = [...array1, ...array2];
-  console.log(allArrays);
-  document.getElementById('myArray').innerHTML = allArrays;
+  console.log('tercer array : ' + allArrays);
+  document.getElementById('myArray').innerHTML = 'tercer array : ' + allArrays;
 }
 
 //ejercicio 2
-//POR QUÉ SE EJECUTA SIN DARLE AL BOTON??
+
 function suma(...numbers) {
   let results = 0;
 
@@ -177,10 +264,10 @@ function objects() {
   objeto2.leche = 20;
   console.log('estos son los ingredientes que hay: ', objeto1, objeto2);
   document.getElementById('myObjects').innerHTML =
-    'estos son los ingredientes que hay: Caja1:' +
+    'estos son los ingredientes que hay: Caja1: ' +
     'café:' +
     objeto1.cafe +
-    ' grs ' +
+    ' grs, ' +
     'leche: ' +
     objeto1.leche +
     ' mls.' +
@@ -192,7 +279,20 @@ function objects() {
 }
 
 //ejercicio 4
-//FALTA------------------------------------------------------------------
+function restOperator() {
+  let array = [1, 2, 3, 4, 5, 6];
+  const [primerElemento, segundoElemento, ...resto] = array;
+  console.log(
+    `Primer elemento: ${primerElemento}, Segundo elemento: ${segundoElemento}, Resto de elementos: ${resto.join(
+      ', ',
+    )}`,
+  );
+  document.getElementById(
+    'restOperator',
+  ).innerHTML = `Primer elemento: ${primerElemento}, Segundo elemento: ${segundoElemento}, Resto de elementos: ${resto.join(
+    ', ',
+  )}`;
+}
 
 //Nivel 3
 //ejercicio 5
@@ -412,11 +512,11 @@ function myPromise() {
     document.getElementById('myPromise').innerHTML = message;
   });
 }
-//Falta--------------------------------------------------------------------------------------
+
 //Ejercicio 3
 
 function myPromiseReact() {
-  let userAnswer = document.getElementById('myPromiseReact').value;
+  let userAnswer = document.getElementById('promise').value;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (userAnswer == 'hola') {
@@ -431,13 +531,19 @@ function myPromiseReact() {
         );
       }
     }, 2000);
-  });
-  // .then((message) => console.log(message))
-  // .catch((error) => console.error(error));
+  })
+    .then((message) => {
+      document.getElementById('myPromiseReact').innerHTML = message;
+      console.log(message);
+    })
+    .catch((error) => {
+      document.getElementById('myPromiseReact').innerHTML = error;
+      console.error(error);
+    });
 }
 
 //Ejercicio 4
-//REVISAR----------------------------------------------------------------
+
 async function myPromise2() {
   const myPromise2 = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -445,7 +551,7 @@ async function myPromise2() {
     }, 2000);
   });
   const message = await myPromise2;
-  console.log('message');
+  console.log(message);
 
   document.getElementById('myPromise2').innerHTML = message;
 }
@@ -453,26 +559,29 @@ myPromise2();
 
 //nivel 2
 //ejercicio 5
-async function asyncAwait() {
+async function myPromise2de2() {
   try {
     const myPromise2 = new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve('Hola, mundo');
+        const condition = false;
+        if (condition) {
+          resolve('hola,mundo');
+        } else {
+          reject('Hubo un error');
+        }
       }, 2000);
     });
 
     const message = await myPromise2;
-
     console.log(message);
-    document.getElementById('asyncAwait').innerHTML = message;
+    document.getElementById('myPromise2de2').innerHTML = message;
   } catch (error) {
-    console.error('Error:', error);
-    document.getElementById('asyncAwait').innerHTML = `Error: ${error}`;
+    console.error(error);
+    document.getElementById('myPromise2de2').innerHTML = 'Error: ' + error;
   }
 }
-asyncAwait();
+myPromise2();
 
-//FALTA----------------------------------------------------------------------------------------------
 //nivel 3
 //ejercicio 6
 
@@ -488,9 +597,11 @@ function promiseAll() {
       resolve('Promesa 2 resuelta en 3 segundos');
     }, 3000);
   });
+
   Promise.all([promesa1, promesa2])
     .then((resultados) => {
       console.log(resultados);
+      document.getElementById('promiseAll').innerHTML = resultados.join('<br>');
     })
     .catch((error) => {
       console.error('Ocurrió un error:', error);

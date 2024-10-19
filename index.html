@@ -18,13 +18,13 @@
   <body>
     <div class="container">
       <div class="mt-5">
-        <h1>S2.1. Exercicios básicos JavaScript</h1>
+        <h1>S2.1. Ejercicios básicos JavaScript</h1>
         <hr />
         <h2 class="mt-2">Ejercicio 1.1: Arrow functions:</h2>
         <h3 class="mt-5 border">Nivel 1</h3>
       </div>
       <div class="mb-5">
-        <h4>Exercicio 1</h4>
+        <h4>Ejercicio 1</h4>
         <p class="mt-2">
           Conversión de funciones: Tienes una función add que acepta dos
           parámetros y devuelve su suma. Conviértela en una función de flecha.
@@ -32,22 +32,22 @@
         </p>
         <div class="d-flex">
           <label for="addition">
-            <b>Ingrese un número </b>
+            <b class="m-2">Ingrese un número </b>
           </label>
           <input
             type="num"
             id="firstNumber" />
-          <label for="addition"> <b>Ingrese otro número </b> </label>
+          <label for="addition"> <b class="m-2" >Ingrese otro número </b> </label>
           <input
             type="num"
             id="secondNumber" />
 
-          <button onclick="addOnclick()">Sumar</button>
-          <p>Respuesta: <span id="addAnswer"></span></p>
+          <button onclick="addOnclick()" class="m-2">Sumar</button>
+          <span id="addAnswer" class="m-2"></span>
         </div>
       </div>
       <div class="mb-5">
-        <h4>Exercicio 2</h4>
+        <h4>Ejercicio 2</h4>
         <p>
           Función de flecha sin parámetros: Crea una función de flecha llamada
           randomNumber que no necesite parámetros y que devuelva un número
@@ -58,7 +58,7 @@
       </div>
 
       <div class="mt-3">
-        <h4>Exercicio 3</h4>
+        <h4>Ejercicio 3</h4>
         <p>
           Uso de 'this' en las funciones de flecha: Crea una clase person que
           tenga una propiedad name y una función greet que utilice una función
@@ -68,7 +68,7 @@
         <button onclick="sayHi()">Saludar</button>
         <span id="hi"></span>
       </div>
-      <!--ME FALTA  -->
+     
       <div>
         <h3 class="mt-5 border">Nivel 2</h3>
         <h4>Exercicio 4</h4>
@@ -77,7 +77,7 @@
           printNumbers que acepte un array de números y utilice un loop for para
           imprimir cada número en la consola utilizando una función de flecha.
         </p>
-        <button onclick="showNumbers()">Mostrar números:</button>
+        <button onclick="printNumbers()">Mostrar números:</button>
         <span id="showNumbers"></span>
       </div>
       <div>
@@ -132,24 +132,53 @@
       </div>
       <h3 class="mt-5 border">Nivel 2</h3>
 
-      <!--ME FALTA-->
       <div class="mb-2">
         <h4>Exercicio 3</h4>
         <p>
           Uso enlazado de operadores ternarios: Escribe una expresión que
           utilice enlaces de operadores ternarios para determinar si un número
-          es positivo, negativo o cero. Operador ternario con funciones: Crea
+          es positivo, negativo o cero. <br> Operador ternario con funciones: Crea
           una función encontrarMaximo que acepte tres parámetros (a, b, c) y
           utilice el operador ternario para determinar el valor máximo.
         </p>
         <label for="typeNumber">
-          <b>Ingrese un número positivo, negativo o cero:</b>
+          <b>Primera parte : Ingrese un número positivo, negativo o cero:</b>
         </label>
         <input
           type="num"
           id="userTypeNumber" />
-        <button onclick="puedeConducir()">Mostrar tipo</button>
-        <span id="showMeTheType"></span>
+        <button onclick="ternario()">Mostrar tipo</button>
+        <span id="ternario"></span>
+        <br>
+        <h4>Segunda parte :</h4>
+        <div class="d-block">
+
+        
+        <label for="typeNumber">
+          <b class="m-1"> Ingrese un número:</b>
+        </label>
+        <input
+          type="num"
+          id="number1" />
+          <br>
+        <label for="typeNumber">
+          <b class="m-1">Ingrese un número:</b>
+        </label>
+        <input
+          type="num"
+          id="number2" />
+          <br>
+        <label for="typeNumber">
+          <b class="m-1"> Ingrese un número:</b>
+        </label>
+        <input
+          type="num"
+          id="number3" />
+        
+          <br>
+        <button onclick="encontrarMaximo()">Mostrar tipo</button>
+        <span id="ternario2"></span>
+      </div>
       </div>
       <h3 class="mt-5 border">Nivel 3</h3>
       <div class="mb-2">
@@ -180,7 +209,7 @@
         <button onclick="myNumber()">Mostrar</button>
         <span id="myCallbackNumber"></span>
       </div>
-      <div class="mt-5 border">
+      <div class="mt-5">
         <h4>Exercicio 2</h4>
         <p>
           Callbacks con operaciones matemáticas: Escribe una función calculadora
@@ -216,10 +245,12 @@
           del array.
         </p>
 
-        <button onclick="">Mostrar</button>
-        <span id=""></span>
+        <button onclick="myCallback2()">Mostrar</button>
+        <br>
+        <span id="myCallback2"></span>
       </div>
       <h3 class="mt-5 border">Nivel 3</h3>
+
       <div>
         <h4>Exercicio 5</h4>
         <p>
@@ -229,8 +260,8 @@
           invocar la función de callback con la cadena transformada.
         </p>
 
-        <button onclick="">Mostrar</button>
-        <span id=""></span>
+        <button onclick="myChain()">Mostrar</button>
+        <span id="myChain"></span>
       </div>
       <hr />
       <h2 class="mt-5">Ejercicio 1.4: Rest & Spread operators:</h2>
@@ -270,7 +301,7 @@
         <button onclick="objects()">Mostrar</button>
         <span id="myObjects"></span>
       </div>
-      <!--FALTA------------------------------------------------------------------------->
+     
       <div class="mt-5">
         <h4>Ejercicio 4</h4>
         <p>
@@ -281,11 +312,11 @@
         </p>
 
         <button
-          onclick=""
+          onclick="restOperator()"
           class="mb-2">
           Mostrar
         </button>
-        <span id=""></span>
+        <span id="restOperator"></span>
       </div>
       <h3 class="mt-5 border">Nivel 3</h3>
 
@@ -534,7 +565,7 @@
           Mostrar en consola
         </button>
       </div>
-      <!--FALTAAAAAA-------------------------------------------------------------------------->
+      
       <div class="mt-5">
         <h4>Ejercicio 3</h4>
         <p>
@@ -549,7 +580,7 @@
         <button
           onclick="myPromiseReact()"
           class="mb-2">
-          Mostrar en consola
+          Mostrar
         </button>
         <span id="myPromiseReact"></span>
       </div>
@@ -561,15 +592,16 @@
           ejercicio 1, y que después imprima este resultado en la consola.
         </p>
 
-        <button
-          onclick="myPromise2()"
-          class="mb-2">
-          Mostrar en consola
-        </button>
+       
         <span id="myPromise2"></span>
+        <button
+        onclick="myPromise2()"
+        class="mb-2">
+        Mostrar de nuevo en consola
+      </button>
       </div>
 
-      <h3 class="mt-5 border">Nivel 1</h3>
+      <h3 class="mt-5 border">Nivel 2</h3>
       <div class="mt-5">
         <h4>Ejercicio 5</h4>
         <p>
@@ -577,8 +609,12 @@
           4 para que capture cualquier posible error utilizando un blog
           try/catch.
         </p>
-
-        <span id="asyncAwait"></span>
+        <button
+        onclick="myPromise2de2()"
+        class="mb-2">
+        Mostrar 
+      </button>
+        <span id="myPromise2de2"></span>
       </div>
       <h3 class="mt-5 border">Nivel 3</h3>
       <div class="mt-5">
@@ -591,7 +627,7 @@
         <button
           onclick="promiseAll()"
           class="mb-2">
-          Mostrar 
+          Mostrar en consola
         </button>
         <span id="promiseAll"></span>
       </div>
