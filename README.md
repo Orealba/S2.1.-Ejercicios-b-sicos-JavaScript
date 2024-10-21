@@ -1,37 +1,34 @@
-Ejercicios Básicos de JavaScript
-Este repositorio contiene varios ejercicios prácticos de JavaScript, cubriendo conceptos fundamentales como funciones flechas, callbacks, operadores ternarios, promesas y más. Estos ejercicios te permitirán mejorar tu comprensión y habilidades en programación asíncrona y manejo de funciones en JavaScript.
+# Ejercicios Básicos de JavaScript
 
-Ejercicios Incluidos:
-Funciones Flechas (Arrow Functions):
+Este repositorio contiene varios ejercicios prácticos de **JavaScript**, cubriendo conceptos fundamentales como **funciones flechas**, **callbacks**, **operadores ternarios**, **promesas** y más. Estos ejercicios están diseñados para mejorar tu comprensión y habilidades en **programación asíncrona** y el manejo de **funciones en JavaScript**.
 
-Se exploran las funciones flechas, su sintaxis compacta y cómo se utilizan en bucles y funciones de callback.
-Callbacks:
+## Ejercicios Incluidos
 
-Creación y uso de callbacks para realizar operaciones como mostrar números, operaciones matemáticas y manipulación de strings.
-Ejemplos con funciones asíncronas y arrays.
-Operador Ternario:
+### 1. Funciones Flechas (Arrow Functions)
+Se exploran las **funciones flechas**, su sintaxis compacta y cómo se utilizan en bucles y funciones de callback.
 
-Uso del operador ternario para realizar comparaciones condicionales de manera concisa.
-Ejemplo de cómo usarlo para encontrar el valor máximo entre tres números.
-Promesas:
+### 2. Callbacks
+Aprende a crear y utilizar **callbacks** para realizar operaciones como:
+- Mostrar números
+- Realizar operaciones matemáticas
+- Manipulación de strings
 
-Uso de promesas para manejar operaciones asincrónicas.
-Ejercicios con Promise.all, manejo de errores y promesas con async/await.
-Destructuring:
+Incluye ejemplos con **funciones asíncronas** y **arrays**.
 
-Ejemplo de cómo utilizar el operador de destructuring y el operador de resto (...) para asignar valores de arrays a variables.
-Cómo usar:
-Clona el repositorio:
+### 3. Operador Ternario
+Uso del **operador ternario** para realizar comparaciones condicionales de manera concisa. Ejemplo práctico de cómo usarlo para encontrar el valor máximo entre tres números.
 
-bash
-Copy code
+### 4. Promesas
+Uso de **promesas** para manejar operaciones asincrónicas, incluyendo:
+- **Promise.all**
+- Manejo de errores
+- Promesas con **async/await**
+
+### 5. Destructuring
+Ejemplos de cómo utilizar el operador de **destructuring** y el operador de resto `(...)` para asignar valores de arrays a variables.
+
+## Cómo Usar
+
+### 1. Clonar el repositorio:
+```bash
 git clone <repositorio_url>
-Abre el archivo HTML:
-
-Abre el archivo HTML en tu navegador para ejecutar los ejercicios.
-Ejecuta los ejercicios:
-
-Cada ejercicio tiene un botón que ejecuta la función asociada y muestra el resultado en la consola o en la página.
-Tecnologías usadas:
-HTML
-JavaScript (ES6+)

@@ -502,7 +502,7 @@ function myIndexFunction() {
 //Ejercicio 1 y 2
 
 function myPromise() {
-  const myPromise = new Promise((resolve, reject) => {
+  const myPromise = new Promise((resolve) => {
     setTimeout(() => {
       resolve('Hola, mundo');
     }, 2000);
@@ -586,13 +586,13 @@ myPromise2();
 //ejercicio 6
 
 function promiseAll() {
-  const promesa1 = new Promise((resolve, reject) => {
+  const promesa1 = new Promise((resolve) => {
     setTimeout(() => {
       resolve('Promesa 1 resuelta en 2 segundos');
     }, 2000);
   });
 
-  const promesa2 = new Promise((resolve, reject) => {
+  const promesa2 = new Promise((resolve) => {
     setTimeout(() => {
       resolve('Promesa 2 resuelta en 3 segundos');
     }, 3000);
